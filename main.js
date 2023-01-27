@@ -38,6 +38,15 @@ function updateDropdownButton() {
 
 // Press the start button.
 
+isDisabled = false;
+
+const startButton = document.querySelector("start-btn");
+
+startButton.addEventListener("click", function () {
+  isDisabled = !isDisabled;
+  dropdownButton.disabled = isDisabled;
+});
+
 // If start button pressed, lock up dropdown.
 
 // Now randomly choose a character type. Fill the enemy-card img with corresponding image, and fill attack options
