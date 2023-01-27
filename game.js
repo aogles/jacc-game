@@ -5,3 +5,4 @@ function damageAmount(min, max) {
 
    console.log(damageAmount);
 }
+

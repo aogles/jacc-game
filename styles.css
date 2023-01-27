@@ -57,7 +57,25 @@ body {
     border: 1px solid red;
 }
 
+
+
+.start-container {
+    display: flex;
+    margin: auto;
+    margin-right: 28%;
+
+
+
+}
+
+#start-btn {
+    margin-right: 20px;
+}
+
 .btn {
     display: inline-flex;
-
+    margin: auto;
+    justify-content: center;
+    justify-content: center;
+    text-align: center;
 }

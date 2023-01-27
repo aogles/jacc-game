@@ -66,6 +66,7 @@ class player extends fire{
         this.firstAttack="Fire Ball";
         this.secondAttack= "Firestorm";
         this.thirdAttack="Heat Wave";
+         
     }
 }
 
