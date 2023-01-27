@@ -1,4 +1,4 @@
-// Update dropdown button title
+// This updates dropdown button
 
 const dropdownButton = document.querySelector(".dropdown-toggle");
 const dropdownEarth = document.querySelector(".btn1");
@@ -24,6 +24,18 @@ function updateDropdownButton() {
 // player-card is waiting for a drop down to occur on info-card.
 
 // Once info-card has selected a drop down choice, look at the array of constructors.
+
+// If dropdown button
+
+// Not working:
+const playerAttackButtons = document.querySelectorAll(".btn-primary");
+playerAttackButtons.innerHTML = "HELLO";
+
+console.log(playerAttackButtons);
+
+if (dropdownButton.innerHTML != "Player class:") {
+  playerAttackButtons[0].innerHTML = dropdownButton.innerHTML;
+}
 
 // Choose an earth/fire/wind/air. Return those values to the three buttons on player-card.
 
