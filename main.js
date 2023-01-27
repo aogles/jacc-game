@@ -1,3 +1,5 @@
+import { Enemy, Character } from "./player.js";
+
 // This updates dropdown button
 
 const dropdownButton = document.querySelector(".dropdown-toggle");

@@ -25,3 +25,5 @@ class Enemy extends Character {
     this.isEvil = true;
   }
 }
+
+export { Enemy, Character };
