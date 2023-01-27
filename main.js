@@ -13,8 +13,13 @@ dropdownWind.addEventListener("click", updateDropdownButton);
 dropdownFire.addEventListener("click", updateDropdownButton);
 dropdownAir.addEventListener("click", updateDropdownButton);
 
+const playerAttackButtons = document.querySelectorAll(".btn-primary");
+
 function updateDropdownButton() {
   dropdownButton.innerHTML = this.innerHTML;
+  playerAttackButtons[0].innerHTML = this.innerHTML + "!";
+  playerAttackButtons[1].innerHTML = this.innerHTML + "!";
+  playerAttackButtons[2].innerHTML = this.innerHTML + "!";
 }
 
 // There are three cards. player-card info-card and enemy-card.
@@ -28,14 +33,6 @@ function updateDropdownButton() {
 // If dropdown button
 
 // Not working:
-const playerAttackButtons = document.querySelectorAll(".btn-primary");
-playerAttackButtons.innerHTML = "HELLO";
-
-console.log(playerAttackButtons);
-
-if (dropdownButton.innerHTML != "Player class:") {
-  playerAttackButtons[0].innerHTML = dropdownButton.innerHTML;
-}
 
 // Choose an earth/fire/wind/air. Return those values to the three buttons on player-card.
 
