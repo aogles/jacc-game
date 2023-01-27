@@ -3,11 +3,27 @@ body {
     flex-direction: row;
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.title-container h5 {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+}
+
 #hero-card {
     width: 100%;
-    height: auto;
-    display: flex;
 
+    display: flex;
+    height: 35em;
 
     text-align: center;
     border: 1px solid red;
@@ -32,9 +48,16 @@ body {
 }
 
 #enemy-card {
+
     width: 100%;
-    height: auto;
+
     display: flex;
+    height: 35em;
     text-align: center;
     border: 1px solid red;
+}
+
+.btn {
+    display: inline-flex;
+
 }
