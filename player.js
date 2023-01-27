@@ -1,9 +1,9 @@
 class character(player,enemy){
     this.type = [earth,air,fire,water];
     this.health = 100;
-    this.firstAttack=[]
-    this.secondAttack=[]
-    this.thirdAttack=[]
+    this.firstAttack=[];
+    this.secondAttack=[];
+    this.thirdAttack=[];
 }
 
 class enemy extends earth{
@@ -11,7 +11,7 @@ class enemy extends earth{
         super(type);
         this.firstAttack= "Rock Throw";
         this.secondAttack="Earthquake";
-        this.thirdAttack=" Mudsling";
+        this.thirdAttack= "Mudsling";
     }
 }
 
