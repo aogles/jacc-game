@@ -36,9 +36,9 @@ function updateDropdownButton() {
 
 // Press the start button.
 
-isDisabled = false;
+let isDisabled = false;
 
-const startButton = document.querySelector("start-btn");
+const startButton = document.getElementById("start-btn");
 
 startButton.addEventListener("click", function () {
   isDisabled = !isDisabled;
