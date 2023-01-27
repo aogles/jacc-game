@@ -32,8 +32,6 @@ function updateDropdownButton() {
 
 // If dropdown button
 
-// Not working:
-
 // Choose an earth/fire/wind/air. Return those values to the three buttons on player-card.
 
 // Allow these to be updated until the start button is pressed.
