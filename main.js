@@ -1,5 +1,22 @@
 // Update dropdown button title
 
+const dropdownButton = document.querySelector(".dropdown-toggle");
+const dropdownEarth = document.querySelector(".btn1");
+const dropdownWind = document.querySelector(".btn2");
+const dropdownFire = document.querySelector(".btn3");
+const dropdownAir = document.querySelector(".btn4");
+
+dropdownButton.innerHTML = "Player class:";
+
+dropdownEarth.addEventListener("click", updateDropdownButton);
+dropdownWind.addEventListener("click", updateDropdownButton);
+dropdownFire.addEventListener("click", updateDropdownButton);
+dropdownAir.addEventListener("click", updateDropdownButton);
+
+function updateDropdownButton() {
+  dropdownButton.innerHTML = this.innerHTML;
+}
+
 // There are three cards. player-card info-card and enemy-card.
 
 // player-card contains image. enemy-card contains image.
