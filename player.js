@@ -9,72 +9,72 @@ class character(player,enemy){
 class enemy extends earth{
     constructor(type){
         super(type);
-        this.firstAttack=;
-        this.secondAttack=;
-        this.thirdAttack=;
+        this.firstAttack= "Rock Throw";
+        this.secondAttack="Earthquake";
+        this.thirdAttack=" Mudsling";
     }
 }
 
 class enemy extends air{
     constructor(type){
         super(type);
-        this.firstAttack=;
-        this.secondAttack=;
-        this.thirdAttack=;
+        this.firstAttack= "Windblade";
+        this.secondAttack="Tornado";
+        this.thirdAttack=" Super Gust";
     }
 }
 
 class enemy extends fire{
     constructor(type){
         super(type);
-        this.firstAttack=;
-        this.secondAttack=;
-        this.thirdAttack=;
+        this.firstAttack="Fire Ball";
+        this.secondAttack= "Firestorm";
+        this.thirdAttack="Heat Wave";
     }
 }
 
 class enemy extends water{
     constructor(type){
         super(type);
-        this.firstAttack=;
-        this.secondAttack=;
-        this.thirdAttack=;
+        this.firstAttack="Water Jet";
+        this.secondAttack="Splash";
+        this.thirdAttack="Geyser";
     }
 }
 
 class enemy extends water{
     constructor(type){
         super(type);
-        this.firstAttack=;
-        this.secondAttack=;
-        this.thirdAttack=;
+        this.firstAttack="Water Jet";
+        this.secondAttack="Splash";
+        this.thirdAttack="Geyser";
     }
 }
 
 class player extends earth{
     constructor(type){
         super(type);
-        this.firstAttack=;
-        this.secondAttack=;
-        this.thirdAttack=;
+        this.firstAttack= "Rock Throw";
+        this.secondAttack="Earthquake";
+        this.thirdAttack=" Mudsling";
     }
 }
 
 class player extends fire{
     constructor(type){
         super(type);
-        this.firstAttack=;
-        this.secondAttack=;
-        this.thirdAttack=;
+        this.firstAttack="Fire Ball";
+        this.secondAttack= "Firestorm";
+        this.thirdAttack="Heat Wave";
     }
 }
 
 class player extends air{
     constructor(type){
         super(type);
-        this.firstAttack=;
-        this.secondAttack=;
-        this.thirdAttack=;
+        this.firstAttack= "Windblade";
+        this.secondAttack="Tornado";
+        this.thirdAttack=" Super Gust";
     }
 }
 
