@@ -61,15 +61,20 @@ body {
 
 .start-container {
     display: flex;
-    margin: auto;
-    margin-right: 28%;
+    /* margin: auto; */
+    /* margin-right: 28%; */
+    justify-content: center
+}
 
+.dropdown {
+    display: flex;
+    margin-left: 2%;
 
 
 }
 
 #start-btn {
-    margin-right: 20px;
+    margin: 0;
 }
 
 .btn {
