@@ -30,8 +30,6 @@ function updateDropdownButton() {
 
 // Once info-card has selected a drop down choice, look at the array of constructors.
 
-// If dropdown button
-
 // Choose an earth/fire/wind/air. Return those values to the three buttons on player-card.
 
 // Allow these to be updated until the start button is pressed.
