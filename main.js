@@ -38,40 +38,40 @@ const playerAttackButtons = document.querySelectorAll(".btn-primary");
 // TODO: Have drop down update the Characters type. Then pull from his type.
 
 function updateDropdownButton() {
-  dropdownButton.innerHTML = this.innerHTML;
+   dropdownButton.innerHTML = this.innerHTML;
 
-  let category = this.innerHTML;
+   let category = this.innerHTML;
 
-  gameInfoText.innerHTML = "Choose your element wisely brave hero!";
+   gameInfoText.innerHTML = "Choose your element wisely brave hero!";
 
-  if (category == "Earth") {
-    currentlyOccurringGame.player.type = earth;
-    heroImage.src = "./images/earth.png";
-    playerClassInfo.innerHTML =
-      "You control the mighty element of earth. It's weakness is fire";
-  } else if (category == "Air") {
-    currentlyOccurringGame.player.type = air;
-    heroImage.src = "./images/wind.png";
-    playerClassInfo.innerHTML =
-      "You control the fierce element of wind. It's weakness is earth.";
-  } else if (category == "Fire") {
-    currentlyOccurringGame.player.type = fire;
-    heroImage.src = "./images/fire.png";
-    playerClassInfo.innerHTML =
-      "You control the destructive element of fire. It's weakness is water.";
-  } else if (category == "Water") {
-    currentlyOccurringGame.player.type = water;
-    heroImage.src = "./images/water.png";
-    playerClassInfo.innerHTML =
-      "You control the graceful element of water. It's weakness is wind.";
-  }
+   if (category == "Earth") {
+      currentlyOccurringGame.player.type = earth;
+      heroImage.src = "./images/earth.png";
+      playerClassInfo.innerHTML =
+         "You control the mighty element of earth. It's weakness is fire";
+   } else if (category == "Air") {
+      currentlyOccurringGame.player.type = air;
+      heroImage.src = "./images/wind.png";
+      playerClassInfo.innerHTML =
+         "You control the fierce element of wind. It's weakness is earth.";
+   } else if (category == "Fire") {
+      currentlyOccurringGame.player.type = fire;
+      heroImage.src = "./images/fire.png";
+      playerClassInfo.innerHTML =
+         "You control the destructive element of fire. It's weakness is water.";
+   } else if (category == "Water") {
+      currentlyOccurringGame.player.type = water;
+      heroImage.src = "./images/water.png";
+      playerClassInfo.innerHTML =
+         "You control the graceful element of water. It's weakness is wind.";
+   }
 
-  playerAttackButtons[0].innerHTML =
-    currentlyOccurringGame.player.type[0] + "!";
-  playerAttackButtons[1].innerHTML =
-    currentlyOccurringGame.player.type[1] + "!";
-  playerAttackButtons[2].innerHTML =
-    currentlyOccurringGame.player.type[2] + "!";
+   playerAttackButtons[0].innerHTML =
+      currentlyOccurringGame.player.type[0] + "!";
+   playerAttackButtons[1].innerHTML =
+      currentlyOccurringGame.player.type[1] + "!";
+   playerAttackButtons[2].innerHTML =
+      currentlyOccurringGame.player.type[2] + "!";
 }
 
 //Allows player attack buttons to be clickable:
@@ -80,37 +80,37 @@ playerAttackButtons[1].addEventListener("click", causeDamage);
 playerAttackButtons[2].addEventListener("click", causeDamage);
 
 function causeDamage() {
-  let inflictedDamage = damage(0, 20);
-  enemyHealth.value = parseInt(enemyHealth.value) - inflictedDamage;
-  gameInfoText.innerHTML =
-    currentlyOccurringGame.player.name +
-    " has damaged " +
-    inflictedDamage +
-    ".";
-  enemyTurn();
-  gameOver();
+   let inflictedDamage = damage(0, 20);
+   enemyHealth.value = parseInt(enemyHealth.value) - inflictedDamage;
+   gameInfoText.innerHTML =
+      currentlyOccurringGame.player.name +
+      " has damaged " +
+      inflictedDamage +
+      ".";
+   enemyTurn();
+   gameOver();
 }
 
 function enemyTurn() {
-  startButton.disabled = true;
-  playerAttackButtons[0].disabled = true;
-  playerAttackButtons[1].disabled = true;
-  playerAttackButtons[2].disabled = true;
-  console.log(playerAttackButtons);
-  setTimeout(damageHeroHealth, 1000);
+   startButton.disabled = true;
+   playerAttackButtons[0].disabled = true;
+   playerAttackButtons[1].disabled = true;
+   playerAttackButtons[2].disabled = true;
+   console.log(playerAttackButtons);
+   setTimeout(damageHeroHealth, 1000);
 }
 
 const damage = function randomDamage(min, max) {
-  return Math.round(Math.random() * (max - min) + min);
+   return Math.round(Math.random() * (max - min) + min);
 };
 
 function damageHeroHealth() {
-  let inflictedDamage = damage(0, 20);
-  heroHealth.value = parseInt(heroHealth.value) - inflictedDamage;
+   let inflictedDamage = damage(0, 20);
+   heroHealth.value = parseInt(heroHealth.value) - inflictedDamage;
 
-  playerAttackButtons[0].disabled = false;
-  playerAttackButtons[1].disabled = false;
-  playerAttackButtons[2].disabled = false;
+   playerAttackButtons[0].disabled = false;
+   playerAttackButtons[1].disabled = false;
+   playerAttackButtons[2].disabled = false;
 
   gameInfoText.innerHTML =
     gameInfoText.innerHTML +
@@ -130,39 +130,39 @@ startButton.addEventListener("click", randomEnemy);
 // info card text update section
 
 function randomEnemy() {
-  dropdownButton.disabled = true;
+   dropdownButton.disabled = true;
 
-  updateInfoText();
-  // Create random class for the enemy.
-  // Rounds to 0 to 4: Math.floor(Math.random() * 10);
+   updateInfoText();
+   // Create random class for the enemy.
+   // Rounds to 0 to 4: Math.floor(Math.random() * 10);
 
-  let randomEnemy = Math.floor(Math.random() * 4);
+   let randomEnemy = Math.floor(Math.random() * 4);
 
-  if (randomEnemy == 1) {
-    currentlyOccurringGame.enemyPlayer.type = air;
-    enemyImage.src = "./images/wind.png";
-  } else if (randomEnemy == 2) {
-    currentlyOccurringGame.enemyPlayer.type = fire;
-    enemyImage.src = "./images/fire.png";
-  } else if (randomEnemy == 3) {
-    currentlyOccurringGame.enemyPlayer.type = water;
-    enemyImage.src = "./images/water.png";
-  } else if (randomEnemy == 0) {
-    currentlyOccurringGame.enemyPlayer.type = earth;
-    enemyImage.src = "./images/earth.png";
-  }
+   if (randomEnemy == 1) {
+      currentlyOccurringGame.enemyPlayer.type = air;
+      enemyImage.src = "./images/wind.png";
+   } else if (randomEnemy == 2) {
+      currentlyOccurringGame.enemyPlayer.type = fire;
+      enemyImage.src = "./images/fire.png";
+   } else if (randomEnemy == 3) {
+      currentlyOccurringGame.enemyPlayer.type = water;
+      enemyImage.src = "./images/water.png";
+   } else if (randomEnemy == 0) {
+      currentlyOccurringGame.enemyPlayer.type = earth;
+      enemyImage.src = "./images/earth.png";
+   }
 
-  playerAttackButtons[4].innerHTML =
-    currentlyOccurringGame.enemyPlayer.type[0] + "!";
-  playerAttackButtons[5].innerHTML =
-    currentlyOccurringGame.enemyPlayer.type[1] + "!";
-  playerAttackButtons[6].innerHTML =
-    currentlyOccurringGame.enemyPlayer.type[2] + "!";
+   playerAttackButtons[4].innerHTML =
+      currentlyOccurringGame.enemyPlayer.type[0] + "!";
+   playerAttackButtons[5].innerHTML =
+      currentlyOccurringGame.enemyPlayer.type[1] + "!";
+   playerAttackButtons[6].innerHTML =
+      currentlyOccurringGame.enemyPlayer.type[2] + "!";
 }
 
 function updateInfoText() {
-  gameInfoText.innerHTML =
-    "Good luck hero. I hope you are victorious. Our kindgdom, no... the entire realm is depending on you. ";
+   gameInfoText.innerHTML =
+      "Good luck hero. I hope you are victorious. Our kindgdom, no... the entire realm is depending on you. ";
 }
 
 const heroHealth = document.getElementById("hero-health");
@@ -172,8 +172,8 @@ const enemyHealth = document.getElementById("enemy-health");
 enemyHealth.value = 100;
 
 function gameOver() {
-  if (heroHealth.value === 0)
-    alert("Game Over! Enemy won. Refresh to start a new game.");
-  else if (enemyHealth.value === 0)
-    alert("game over! Hero won.Refresh to start a new game.");
+   if (heroHealth.value === 0)
+      alert("Game Over! Enemy won. Refresh to start a new game.");
+   else if (enemyHealth.value === 0)
+      alert("game over! Hero won.Refresh to start a new game.");
 }
