@@ -56,8 +56,12 @@ playerAttackButtons[1].addEventListener("click", causeDamage);
 playerAttackButtons[2].addEventListener("click", causeDamage);
 
 function causeDamage() {
-  // nothing;
+  enemyHealth.value = parseInt(enemyHealth.value) - damage(0 - 20);
 }
+
+const damage = function randomDamage(min, max) {
+  return Math.round(Math.random() * (max - min) + min);
+};
 
 // Add event listeners to the attack buttons.
 
