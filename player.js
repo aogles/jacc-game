@@ -27,3 +27,4 @@ class Enemy extends Character {
 }
 
 export { Enemy, Character };
+export { earth, air, fire, water };

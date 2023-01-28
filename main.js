@@ -1,5 +1,7 @@
 // This updates dropdown button
 
+import { earth, air, fire, water } from "./player.js";
+
 const dropdownButton = document.querySelector(".dropdown-toggle");
 const dropdownEarth = document.querySelector(".btn1");
 const dropdownWind = document.querySelector(".btn2");
