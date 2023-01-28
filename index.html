@@ -26,7 +26,13 @@
         <h5 class="card-title">Player {insert name}</h5>
       </div>
 
-      <div class="health" id="hero-health"></div>
+      <progress
+        class="health"
+        id="hero-health"
+        value="100"
+        max="100"
+      ></progress>
+
       <div class="card" id="playerCard">
         <!-- temporary image placeholder start -->
         <img
@@ -104,7 +110,12 @@
         <h5 class="card-title">Enemy{enemy name}</h5>
       </div>
 
-      <div class="health" id="enemy-health"></div>
+      <progress
+        class="health"
+        id="enemy-health"
+        value="100"
+        max="100"
+      ></progress>
 
       <div class="card" id="enemyCard">
         <!-- temporary image placeholder start -->

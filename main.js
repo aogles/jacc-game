@@ -102,3 +102,9 @@ startButton.addEventListener("click", function () {
 // Add the attack damage to the info box.
 
 // When do the health bars get added?
+
+const heroHealth = document.getElementById("hero-health");
+heroHealth.value -= 10;
+
+const enemyHealth = document.getElementById("enemy-health");
+heroHealth.value -= 10;
