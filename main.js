@@ -158,7 +158,7 @@ function randomEnemy() {
 // When do the health bars get added?
 
 const heroHealth = document.getElementById("hero-health");
-heroHealth.value -= 10;
+heroHealth.value = 100;
 
 const enemyHealth = document.getElementById("enemy-health");
-enemyHealth.value -= 10;
+enemyHealth.value = 100;
