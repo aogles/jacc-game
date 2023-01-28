@@ -7,7 +7,7 @@ import { earth, air, fire, water } from "./player.js";
 let heroImage = document.getElementById("hero-image");
 
 let enemyImage = document.getElementById("enemy-image");
-
+const gameInfoText = document.getElementById("game-text-update");
 const playerClassInfo = document.getElementById("player-class-description");
 
 const dropdownButton = document.querySelector(".dropdown-toggle");
@@ -37,27 +37,29 @@ function updateDropdownButton() {
       playerAttackButtons[1].innerHTML = earth[1] + "!";
       playerAttackButtons[2].innerHTML = earth[2] + "!";
       heroImage.src = "./images/earth.png";
-      playerClassInfo.innerHTML = "You control the elements of earth";
+      playerClassInfo.innerHTML = "You control the mighty element of earth";
+      gameInfoText.innerHTML = "Choose your element wisely ";
    } else if (category == "Air") {
       playerAttackButtons[0].innerHTML = air[0] + "!";
       playerAttackButtons[1].innerHTML = air[1] + "!";
       playerAttackButtons[2].innerHTML = air[2] + "!";
       heroImage.src = "./images/wind.png";
-      playerClassInfo.innerHTML =
-         "Wind element class. Attacks are... and additional info";
+      playerClassInfo.innerHTML = "You control the fierce element of wind";
+      gameInfoText.innerHTML = "Choose your element wisely brave hero";
    } else if (category == "Fire") {
       playerAttackButtons[0].innerHTML = fire[0] + "!";
       playerAttackButtons[1].innerHTML = fire[1] + "!";
       playerAttackButtons[2].innerHTML = fire[2] + "!";
       heroImage.src = "./images/fire.png";
-      playerClassInfo.innerHTML =
-         "Fire element class. Attacks are... and additional info";
+      playerClassInfo.innerHTML = "You control the destructive element of fire";
+      gameInfoText.innerHTML = "Choose your element wisely brave hero";
    } else if (category == "Water") {
       playerAttackButtons[0].innerHTML = water[0] + "!";
       playerAttackButtons[1].innerHTML = water[1] + "!";
       playerAttackButtons[2].innerHTML = water[2] + "!";
       heroImage.src = "./images/water.png";
-      ("Fire element class. Attacks are... and additional info");
+      playerClassInfo.innerHTML = "You control the graceful element of water";
+      gameInfoText.innerHTML = "Choose your element wisely brave hero";
    }
 }
 
@@ -127,9 +129,10 @@ function randomEnemy() {
       enemyImage.src = "./images/earth.png";
    }
 }
-let gameInfoText = document.getElementById("game-text-update");
+
 function updateInfoText() {
-   gameInfoText.innerHTML = "Choose your element wisely brave hero";
+   gameInfoText.innerHTML =
+      "Good luck hero. I hope you are victorious. Our kindgdom, no... the entire realm is depending on you. ";
 }
 
 // If start button pressed, lock up dropdown.
