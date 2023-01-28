@@ -2,6 +2,10 @@
 
 import { earth, air, fire, water } from "./player.js";
 
+let heroImage = document.getElementById("hero-image");
+
+let enemyImage = document.getElementById("enemy-image");
+
 const dropdownButton = document.querySelector(".dropdown-toggle");
 const dropdownEarth = document.querySelector(".btn1");
 const dropdownWind = document.querySelector(".btn2");
@@ -28,18 +32,22 @@ function updateDropdownButton() {
     playerAttackButtons[0].innerHTML = earth[0] + "!";
     playerAttackButtons[1].innerHTML = earth[1] + "!";
     playerAttackButtons[2].innerHTML = earth[2] + "!";
+    heroImage.src = "./images/earth.png";
   } else if (category == "Air") {
     playerAttackButtons[0].innerHTML = air[0] + "!";
     playerAttackButtons[1].innerHTML = air[1] + "!";
     playerAttackButtons[2].innerHTML = air[2] + "!";
+    heroImage.src = "./images/wind.png";
   } else if (category == "Fire") {
     playerAttackButtons[0].innerHTML = fire[0] + "!";
     playerAttackButtons[1].innerHTML = fire[1] + "!";
     playerAttackButtons[2].innerHTML = fire[2] + "!";
+    heroImage.src = "./images/fire.png";
   } else if (category == "Water") {
     playerAttackButtons[0].innerHTML = water[0] + "!";
     playerAttackButtons[1].innerHTML = water[1] + "!";
     playerAttackButtons[2].innerHTML = water[2] + "!";
+    heroImage.src = "./images/water.png";
   }
 }
 
@@ -84,18 +92,22 @@ startButton.addEventListener("click", function () {
     playerAttackButtons[4].innerHTML = earth[0] + "!";
     playerAttackButtons[5].innerHTML = earth[1] + "!";
     playerAttackButtons[6].innerHTML = earth[2] + "!";
+    enemyImage.src = "./images/earth.png";
   } else if (category == 1) {
     playerAttackButtons[4].innerHTML = air[0] + "!";
     playerAttackButtons[5].innerHTML = air[1] + "!";
     playerAttackButtons[6].innerHTML = air[2] + "!";
+    enemyImage.src = "./images/wind.png";
   } else if (category == 2) {
     playerAttackButtons[4].innerHTML = fire[0] + "!";
     playerAttackButtons[5].innerHTML = fire[1] + "!";
     playerAttackButtons[6].innerHTML = fire[2] + "!";
+    enemyImage.src = "./images/fire.png";
   } else if (category == 3) {
     playerAttackButtons[4].innerHTML = water[0] + "!";
     playerAttackButtons[5].innerHTML = water[1] + "!";
     playerAttackButtons[6].innerHTML = water[2] + "!";
+    enemyImage.src = "./images/water.png";
   }
 });
 
