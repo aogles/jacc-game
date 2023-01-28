@@ -19,9 +19,26 @@ const playerAttackButtons = document.querySelectorAll(".btn-primary");
 
 function updateDropdownButton() {
   dropdownButton.innerHTML = this.innerHTML;
-  playerAttackButtons[0].innerHTML = this.innerHTML + "!";
-  playerAttackButtons[1].innerHTML = this.innerHTML + "!";
-  playerAttackButtons[2].innerHTML = this.innerHTML + "!";
+
+  let category = this.innerHTML;
+
+  if (category == "Earth") {
+    playerAttackButtons[0].innerHTML = earth[0] + "!";
+    playerAttackButtons[1].innerHTML = earth[1] + "!";
+    playerAttackButtons[2].innerHTML = earth[2] + "!";
+  } else if (category == "Air") {
+    playerAttackButtons[0].innerHTML = air[0] + "!";
+    playerAttackButtons[1].innerHTML = air[1] + "!";
+    playerAttackButtons[2].innerHTML = air[2] + "!";
+  } else if (category == "Fire") {
+    playerAttackButtons[0].innerHTML = fire[0] + "!";
+    playerAttackButtons[1].innerHTML = fire[1] + "!";
+    playerAttackButtons[2].innerHTML = fire[2] + "!";
+  } else if (category == "Water") {
+    playerAttackButtons[0].innerHTML = water[0] + "!";
+    playerAttackButtons[1].innerHTML = water[1] + "!";
+    playerAttackButtons[2].innerHTML = water[2] + "!";
+  }
 }
 
 // There are three cards. player-card info-card and enemy-card.
