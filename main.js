@@ -39,30 +39,28 @@ function updateDropdownButton() {
 
   let category = this.innerHTML;
 
+  gameInfoText.innerHTML = "Choose your element wisely brave hero!";
+
   if (category == "Earth") {
     currentlyOccurringGame.player.type = earth;
     heroImage.src = "./images/earth.png";
     playerClassInfo.innerHTML =
       "You control the mighty element of earth. It's weakness is fire";
-    gameInfoText.innerHTML = "Choose your element wisely brave hero!";
   } else if (category == "Air") {
     currentlyOccurringGame.player.type = air;
     heroImage.src = "./images/wind.png";
     playerClassInfo.innerHTML =
       "You control the fierce element of wind. It's weakness is earth.";
-    gameInfoText.innerHTML = "Choose your element wisely brave hero!";
   } else if (category == "Fire") {
     currentlyOccurringGame.player.type = fire;
     heroImage.src = "./images/fire.png";
     playerClassInfo.innerHTML =
       "You control the destructive element of fire. It's weakness is water.";
-    gameInfoText.innerHTML = "Choose your element wisely brave hero!";
   } else if (category == "Water") {
     currentlyOccurringGame.player.type = water;
     heroImage.src = "./images/water.png";
     playerClassInfo.innerHTML =
       "You control the graceful element of water. It's weakness is wind.";
-    gameInfoText.innerHTML = "Choose your element wisely brave hero!";
   }
 
   playerAttackButtons[0].innerHTML =
@@ -120,26 +118,25 @@ function randomEnemy() {
   let randomEnemy = Math.floor(Math.random() * 4);
 
   if (randomEnemy == 1) {
-    playerAttackButtons[4].innerHTML = air[0] + "!";
-    playerAttackButtons[5].innerHTML = air[1] + "!";
-    playerAttackButtons[6].innerHTML = air[2] + "!";
+    currentlyOccurringGame.enemyPlayer.type = air;
     enemyImage.src = "./images/wind.png";
   } else if (randomEnemy == 2) {
-    playerAttackButtons[4].innerHTML = fire[0] + "!";
-    playerAttackButtons[5].innerHTML = fire[1] + "!";
-    playerAttackButtons[6].innerHTML = fire[2] + "!";
+    currentlyOccurringGame.enemyPlayer.type = fire;
     enemyImage.src = "./images/fire.png";
   } else if (randomEnemy == 3) {
-    playerAttackButtons[4].innerHTML = water[0] + "!";
-    playerAttackButtons[5].innerHTML = water[1] + "!";
-    playerAttackButtons[6].innerHTML = water[2] + "!";
+    currentlyOccurringGame.enemyPlayer.type = water;
     enemyImage.src = "./images/water.png";
   } else if (randomEnemy == 0) {
-    playerAttackButtons[4].innerHTML = earth[0] + "!";
-    playerAttackButtons[5].innerHTML = earth[1] + "!";
-    playerAttackButtons[6].innerHTML = earth[2] + "!";
+    currentlyOccurringGame.enemyPlayer.type = earth;
     enemyImage.src = "./images/earth.png";
   }
+
+  playerAttackButtons[4].innerHTML =
+    currentlyOccurringGame.enemyPlayer.type[0] + "!";
+  playerAttackButtons[5].innerHTML =
+    currentlyOccurringGame.enemyPlayer.type[1] + "!";
+  playerAttackButtons[6].innerHTML =
+    currentlyOccurringGame.enemyPlayer.type[2] + "!";
 }
 
 function updateInfoText() {
