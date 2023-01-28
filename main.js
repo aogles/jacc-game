@@ -32,35 +32,39 @@ function updateDropdownButton() {
 
   let category = this.innerHTML;
 
-  if (category == "Earth") {
-    playerAttackButtons[0].innerHTML = earth[0] + "!";
-    playerAttackButtons[1].innerHTML = earth[1] + "!";
-    playerAttackButtons[2].innerHTML = earth[2] + "!";
-    heroImage.src = "./images/earth.png";
-    playerClassInfo.innerHTML = "You control the mighty element of earth";
-    gameInfoText.innerHTML = "Choose your element wisely ";
-  } else if (category == "Air") {
-    playerAttackButtons[0].innerHTML = air[0] + "!";
-    playerAttackButtons[1].innerHTML = air[1] + "!";
-    playerAttackButtons[2].innerHTML = air[2] + "!";
-    heroImage.src = "./images/wind.png";
-    playerClassInfo.innerHTML = "You control the fierce element of wind";
-    gameInfoText.innerHTML = "Choose your element wisely brave hero";
-  } else if (category == "Fire") {
-    playerAttackButtons[0].innerHTML = fire[0] + "!";
-    playerAttackButtons[1].innerHTML = fire[1] + "!";
-    playerAttackButtons[2].innerHTML = fire[2] + "!";
-    heroImage.src = "./images/fire.png";
-    playerClassInfo.innerHTML = "You control the destructive element of fire";
-    gameInfoText.innerHTML = "Choose your element wisely brave hero";
-  } else if (category == "Water") {
-    playerAttackButtons[0].innerHTML = water[0] + "!";
-    playerAttackButtons[1].innerHTML = water[1] + "!";
-    playerAttackButtons[2].innerHTML = water[2] + "!";
-    heroImage.src = "./images/water.png";
-    playerClassInfo.innerHTML = "You control the graceful element of water";
-    gameInfoText.innerHTML = "Choose your element wisely brave hero";
-  }
+   if (category == "Earth") {
+      playerAttackButtons[0].innerHTML = earth[0] + "!";
+      playerAttackButtons[1].innerHTML = earth[1] + "!";
+      playerAttackButtons[2].innerHTML = earth[2] + "!";
+      heroImage.src = "./images/earth.png";
+      playerClassInfo.innerHTML =
+         "You control the mighty element of earth. It's weakness is fire";
+      gameInfoText.innerHTML = "Choose your element wisely brave hero";
+   } else if (category == "Air") {
+      playerAttackButtons[0].innerHTML = air[0] + "!";
+      playerAttackButtons[1].innerHTML = air[1] + "!";
+      playerAttackButtons[2].innerHTML = air[2] + "!";
+      heroImage.src = "./images/wind.png";
+      playerClassInfo.innerHTML =
+         "You control the fierce element of wind. It's weakness is earth";
+      gameInfoText.innerHTML = "Choose your element wisely brave hero";
+   } else if (category == "Fire") {
+      playerAttackButtons[0].innerHTML = fire[0] + "!";
+      playerAttackButtons[1].innerHTML = fire[1] + "!";
+      playerAttackButtons[2].innerHTML = fire[2] + "!";
+      heroImage.src = "./images/fire.png";
+      playerClassInfo.innerHTML =
+         "You control the destructive element of fire. It's weakness is water.";
+      gameInfoText.innerHTML = "Choose your element wisely brave hero";
+   } else if (category == "Water") {
+      playerAttackButtons[0].innerHTML = water[0] + "!";
+      playerAttackButtons[1].innerHTML = water[1] + "!";
+      playerAttackButtons[2].innerHTML = water[2] + "!";
+      heroImage.src = "./images/water.png";
+      playerClassInfo.innerHTML =
+         "You control the graceful element of water. It's weakness is wind";
+      gameInfoText.innerHTML = "Choose your element wisely brave hero";
+   }
 }
 
 playerAttackButtons[0].addEventListener("click", causeDamage);
