@@ -1,8 +1,13 @@
 // This updates dropdown button
 
 import { earth, air, fire, water } from "./player.js";
+import { Game } from "./game.js";
 
 // **** target character images area ****
+
+let currentlyOccurringGame = new Game();
+
+currentlyOccurringGame.player.name = "Jacc";
 
 let heroImage = document.getElementById("hero-image");
 
