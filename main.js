@@ -7,9 +7,9 @@ import { Game } from "./game.js";
 
 let currentlyOccurringGame = new Game();
 
-// let name = prompt('Welcome! What's your name!');
+// let name = prompt('Welcome! What's your name?');
 
-currentlyOccurringGame.player.name = "Jacc"; //set to name
+currentlyOccurringGame.player.name = "Jacc"; // set to name
 
 let heroImage = document.getElementById("hero-image");
 
@@ -77,7 +77,13 @@ playerAttackButtons[1].addEventListener("click", causeDamage);
 playerAttackButtons[2].addEventListener("click", causeDamage);
 
 function causeDamage() {
-  enemyHealth.value = parseInt(enemyHealth.value) - damage(0, 20);
+  let inflictedDamage = damage(0, 20);
+  enemyHealth.value = parseInt(enemyHealth.value) - inflictedDamage;
+  gameInfoText.innerHTML =
+    currentlyOccurringGame.player.name +
+    " has damaged " +
+    inflictedDamage +
+    ".";
   enemyTurn();
   gameOver();
 }
@@ -96,11 +102,22 @@ const damage = function randomDamage(min, max) {
 };
 
 function damageHeroHealth() {
-  heroHealth.value = parseInt(heroHealth.value) - damage(0, 20);
+  let inflictedDamage = damage(0, 20);
+  heroHealth.value = parseInt(heroHealth.value) - inflictedDamage;
 
   playerAttackButtons[0].disabled = false;
   playerAttackButtons[1].disabled = false;
   playerAttackButtons[2].disabled = false;
+
+  gameInfoText.innerHTML =
+    gameInfoText.innerHTML +
+    "<br>The enemy has damaged " +
+    currentlyOccurringGame.player.name +
+    " " +
+    inflictedDamage +
+    ".";
+
+  // report what attack was used and add to info box;
 }
 
 const startButton = document.getElementById("start-btn");

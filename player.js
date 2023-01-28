@@ -9,7 +9,7 @@ const water = ["Water Jet", "Splash", "Geyser"];
 class Character {
   constructor({ name } = {}) {
     this.name = name;
-    this.type = []; // Defaults character to Earth
+    this.type = [];
     this.health = 100;
     this.firstAttack = this.type.firstAttack;
     this.secondAttack = this.type.secondAttack;
