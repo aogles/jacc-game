@@ -115,4 +115,4 @@ const heroHealth = document.getElementById("hero-health");
 heroHealth.value -= 10;
 
 const enemyHealth = document.getElementById("enemy-health");
-heroHealth.value -= 10;
+enemyHealth.value -= 10;
