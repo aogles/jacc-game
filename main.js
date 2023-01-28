@@ -83,6 +83,7 @@ function causeDamage() {
 }
 
 function enemyTurn() {
+  startButton.disabled = true;
   playerAttackButtons[0].disabled = true;
   playerAttackButtons[1].disabled = true;
   playerAttackButtons[2].disabled = true;
@@ -110,6 +111,7 @@ startButton.addEventListener("click", randomEnemy);
 
 function randomEnemy() {
   dropdownButton.disabled = true;
+
   updateInfoText();
   // Create random class for the enemy.
   // Rounds to 0 to 4: Math.floor(Math.random() * 10);
