@@ -47,6 +47,10 @@ playerAttackButtons[0].addEventListener("click", causeDamage);
 playerAttackButtons[1].addEventListener("click", causeDamage);
 playerAttackButtons[2].addEventListener("click", causeDamage);
 
+function causeDamage() {
+  // nothing;
+}
+
 // Add event listeners to the attack buttons.
 
 // There are three cards. player-card info-card and enemy-card.
@@ -70,6 +74,29 @@ const startButton = document.getElementById("start-btn");
 startButton.addEventListener("click", function () {
   isDisabled = !isDisabled;
   dropdownButton.disabled = isDisabled;
+
+  // Create random class for the enemy.
+  // Rounds to 0 to 4: Math.floor(Math.random() * 10);
+
+  let randomEnemy = Math.floor(Math.random() * 4);
+
+  if (randomEnemy == 0) {
+    playerAttackButtons[4].innerHTML = earth[0] + "!";
+    playerAttackButtons[5].innerHTML = earth[1] + "!";
+    playerAttackButtons[6].innerHTML = earth[2] + "!";
+  } else if (category == 1) {
+    playerAttackButtons[4].innerHTML = air[0] + "!";
+    playerAttackButtons[5].innerHTML = air[1] + "!";
+    playerAttackButtons[6].innerHTML = air[2] + "!";
+  } else if (category == 2) {
+    playerAttackButtons[4].innerHTML = fire[0] + "!";
+    playerAttackButtons[5].innerHTML = fire[1] + "!";
+    playerAttackButtons[6].innerHTML = fire[2] + "!";
+  } else if (category == 3) {
+    playerAttackButtons[4].innerHTML = water[0] + "!";
+    playerAttackButtons[5].innerHTML = water[1] + "!";
+    playerAttackButtons[6].innerHTML = water[2] + "!";
+  }
 });
 
 // If start button pressed, lock up dropdown.
