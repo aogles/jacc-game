@@ -8,6 +8,8 @@ let heroImage = document.getElementById("hero-image");
 
 let enemyImage = document.getElementById("enemy-image");
 
+const playerClassInfo = document.getElementById("player-class-description");
+
 const dropdownButton = document.querySelector(".dropdown-toggle");
 const dropdownEarth = document.querySelector(".btn1");
 const dropdownWind = document.querySelector(".btn2");
@@ -35,21 +37,27 @@ function updateDropdownButton() {
       playerAttackButtons[1].innerHTML = earth[1] + "!";
       playerAttackButtons[2].innerHTML = earth[2] + "!";
       heroImage.src = "./images/earth.png";
+      playerClassInfo.innerHTML = "You control the elements of earth";
    } else if (category == "Air") {
       playerAttackButtons[0].innerHTML = air[0] + "!";
       playerAttackButtons[1].innerHTML = air[1] + "!";
       playerAttackButtons[2].innerHTML = air[2] + "!";
       heroImage.src = "./images/wind.png";
+      playerClassInfo.innerHTML =
+         "Wind element class. Attacks are... and additional info";
    } else if (category == "Fire") {
       playerAttackButtons[0].innerHTML = fire[0] + "!";
       playerAttackButtons[1].innerHTML = fire[1] + "!";
       playerAttackButtons[2].innerHTML = fire[2] + "!";
       heroImage.src = "./images/fire.png";
+      playerClassInfo.innerHTML =
+         "Fire element class. Attacks are... and additional info";
    } else if (category == "Water") {
       playerAttackButtons[0].innerHTML = water[0] + "!";
       playerAttackButtons[1].innerHTML = water[1] + "!";
       playerAttackButtons[2].innerHTML = water[2] + "!";
       heroImage.src = "./images/water.png";
+      ("Fire element class. Attacks are... and additional info");
    }
 }
 
@@ -121,7 +129,7 @@ function randomEnemy() {
 }
 let gameInfoText = document.getElementById("game-text-update");
 function updateInfoText() {
-   gameInfoText.innerHTML = "";
+   gameInfoText.innerHTML = "Choose your element wisely brave hero";
 }
 
 // If start button pressed, lock up dropdown.
