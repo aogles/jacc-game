@@ -12,6 +12,7 @@ body {
     font-family: 'VT323', monospace;
     font-size: 20px;
 
+
 }
 
 .container {
@@ -27,7 +28,7 @@ body {
     flex-direction: column;
     font-family: 'VT323', monospace;
     font-variant: small-caps;
-
+    
 
 }
 
@@ -44,7 +45,7 @@ body {
     height: 35em;
 
     text-align: center;
-    border: 1px solid red;
+    border: 2px solid rgb(175, 175, 175);
 }
 
 
@@ -54,12 +55,33 @@ body {
     display: flex;
     flex-direction: column;
     text-align: center;
-    border: 1px solid red;
+    border: 2px solid rgb(175, 175, 175);
     margin: 3% 10px 0 10px;
     width: 100%;
     height: 560px;
 
 }
+
+
+#hero-image {
+    width: 90%;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid transparent;
+
+    border-radius: 5px;
+}
+
+#enemy-image {
+    width: 90%;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+}
+
 
 /* #title-seperator {
     height: auto;
@@ -90,7 +112,7 @@ body {
     display: flex;
     height: 35em;
     text-align: center;
-    border: 1px solid red;
+    border: 2px solid rgb(175, 175, 175);
 }
 
 
@@ -111,6 +133,8 @@ body {
 
 #start-btn {
     margin: 0;
+    background-color: red;
+    color: white;
 }
 
 .btn {
@@ -122,5 +146,12 @@ body {
     text-align: center;
     width: 120px;
     height: auto;
+    background-color: rgb(96, 96, 96);
+    color: white;
 
+
+}
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: #8064A2 !important;
 }
