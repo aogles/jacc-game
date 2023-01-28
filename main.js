@@ -3,6 +3,9 @@
 import { earth, air, fire, water } from "./player.js";
 import { Game } from "./game.js";
 
+var laugh = new Audio("./audio/evil-laugh.mp3");
+
+console.log("check");
 // **** target character images area ****
 
 let currentlyOccurringGame = new Game();
@@ -116,7 +119,7 @@ function damageHeroHealth() {
     " " +
     inflictedDamage +
     ".";
-
+  laugh.play();
   // report what attack was used and add to info box;
 }
 
