@@ -79,6 +79,7 @@ playerAttackButtons[2].addEventListener("click", causeDamage);
 function causeDamage() {
   enemyHealth.value = parseInt(enemyHealth.value) - damage(0, 20);
   enemyTurn();
+  gameOver();
 }
 
 function enemyTurn() {
@@ -149,3 +150,10 @@ heroHealth.value = 100;
 
 const enemyHealth = document.getElementById("enemy-health");
 enemyHealth.value = 100;
+
+function gameOver() {
+  if (heroHealth.value === 0)
+    alert("Game Over! Enemy won. Refresh to start a new game.");
+  else if (enemyHealth.value === 0)
+    alert("game over! Hero won.Refresh to start a new game.");
+}
