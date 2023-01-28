@@ -15,6 +15,11 @@ body {
 
 #main-title {
     margin-bottom: 20%;
+    font-size: 100px;
+    margin-top: 1%;
+    padding: 0;
+    color: rgb(233, 19, 19);
+
 }
 
 
@@ -25,6 +30,7 @@ body {
     margin-bottom: 30px;
     height: 80px;
     width: 360px;
+
 }
 
 .container {
@@ -63,7 +69,7 @@ body {
     flex-direction: column;
     text-align: center;
     /* border: 2px solid rgb(175, 175, 175); */
-    margin: 3% 10px 0 10px;
+    margin: .5% 10px 0 10px;
     width: 100%;
     height: 660px;
 
@@ -170,7 +176,7 @@ body {
     color: white;
 } */
 
-.btn {
+.btn-primary {
     font-size: 18px;
     display: inline-flex;
     margin: auto;
@@ -179,21 +185,15 @@ body {
     text-align: center;
     width: 8em;
     height: 2.5em;
-    background-color: rgb(96, 96, 96);
+    background-color: rgb(50, 160, 238);
     color: white;
 }
 
 
-.btn:active {
-    transform: scale(2em);
 
-}
-
-
-
-.btn-primary,
+/* .btn-primary,
 .btn-primary:hover,
 .btn-primary:active,
 .btn-primary:visited {
     background-color: #8064a2 !important;
-}
+} */
