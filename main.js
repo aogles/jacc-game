@@ -88,6 +88,20 @@ const damage = function randomDamage(min, max) {
   return Math.round(Math.random() * (max - min) + min);
 };
 
+setTimeout(damageHeroHealth, 10 / 1000);
+
+function damageHeroHealth() {
+  heroHealth.value = parseInt(heroHealth.value) - damage(0, 20);
+
+  endEnemyTurn();
+}
+
+function endEnemyTurn() {
+  playerAttackButtons[0].disabled = false;
+  playerAttackButtons[1].disabled = false;
+  playerAttackButtons[2].disabled = false;
+}
+
 // Add event listeners to the attack buttons.
 
 // There are three cards. player-card info-card and enemy-card.
