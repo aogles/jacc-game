@@ -17,6 +17,8 @@ dropdownAir.addEventListener("click", updateDropdownButton);
 
 const playerAttackButtons = document.querySelectorAll(".btn-primary");
 
+// TODO: Have drop down update the Characters type. Then pull from his type.
+
 function updateDropdownButton() {
   dropdownButton.innerHTML = this.innerHTML;
 
@@ -40,6 +42,12 @@ function updateDropdownButton() {
     playerAttackButtons[2].innerHTML = water[2] + "!";
   }
 }
+
+playerAttackButtons[0].addEventListener("click", causeDamage);
+playerAttackButtons[1].addEventListener("click", causeDamage);
+playerAttackButtons[2].addEventListener("click", causeDamage);
+
+// Add event listeners to the attack buttons.
 
 // There are three cards. player-card info-card and enemy-card.
 
