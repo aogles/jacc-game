@@ -3,6 +3,12 @@
 import { earth, air, fire, water } from "./player.js";
 import { Game } from "./game.js";
 
+const heroHealth = document.getElementById("hero-health");
+heroHealth.value = 100;
+
+const enemyHealth = document.getElementById("enemy-health");
+enemyHealth.value = 100;
+
 var laugh = new Audio("./audio/evil-laugh.mp3");
 var click = new Audio("./audio/wooden-click.wav");
 
@@ -102,8 +108,8 @@ function causeDamage() {
       inflictedDamage +
       ".";
   }
+  gameOver();
   enemyTurn();
-
   click.play();
 }
 
@@ -201,12 +207,6 @@ function updateInfoText() {
   gameInfoText.innerHTML =
     "Good luck hero. I hope you are victorious. Our kindgdom, no... the entire realm is depending on you. ";
 }
-
-const heroHealth = document.getElementById("hero-health");
-heroHealth.value = 100;
-
-const enemyHealth = document.getElementById("enemy-health");
-enemyHealth.value = 100;
 
 function gameOver() {
   if (heroHealth.value === 0) {
