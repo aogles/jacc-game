@@ -4,6 +4,7 @@ import { earth, air, fire, water } from "./player.js";
 import { Game } from "./game.js";
 
 var laugh = new Audio("./audio/evil-laugh.mp3");
+var click = new Audio("./audio/wooden-click.wav");
 
 console.log("check");
 // **** target character images area ****
@@ -102,6 +103,7 @@ function causeDamage() {
    }
    enemyTurn();
    gameOver();
+   click.play();
 }
 
 function enemyTurn() {

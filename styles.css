@@ -24,7 +24,7 @@ body {
     font-size: 90px;
     margin-top: 8%;
     padding: 0;
-    color: rgb(109, 60, 20);
+    color: #6d3c14;
 
     padding-top: 18px;
 
@@ -182,7 +182,7 @@ body {
 #start-btn {
     margin: 0;
     background-color: red;
-    color: white;
+    color: #6d3c14;
 }
 
 /* .btn {
@@ -200,6 +200,7 @@ body {
 
 .btn-primary {
     font-size: 18px;
+    padding-bottom: 10px;
     display: inline-flex;
     margin: auto;
     justify-content: center;
@@ -207,15 +208,36 @@ body {
     text-align: center;
     width: 8em;
     height: 2.5em;
-    background-color: rgb(50, 160, 238);
-    color: white;
+
+    background-image: url("/images/button.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #6d3c14;
+    border-color: transparent;
+    background-color: transparent;
 }
 
+.btn-text {
+    margin-bottom: 13px !important;
+}
 
+.btn-primary:active {
+    background-image: url("/images/button_pressed.png");
+}
 
-/* .btn-primary,
+.btn-primary:hover {
+    color: #6d3c14;
+}
+
+.btn-primary:visited {
+    color: #6d3c14;
+}
+
+.btn-primary,
 .btn-primary:hover,
 .btn-primary:active,
 .btn-primary:visited {
-    background-color: #8064a2 !important;
-} */
+    color: #6d3c14 !important;
+    border-color: transparent !important;
+    background-color: transparent !important;
+}
