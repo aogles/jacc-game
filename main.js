@@ -12,7 +12,7 @@ enemyHealth.value = 100;
 var laugh = new Audio("./audio/evil-laugh.mp3");
 var click = new Audio("./audio/wooden-click.wav");
 var drip = new Audio("./audio/water.mp3");
-var crackle = new Audio("./auidio/fire.mp3");
+var crackle = new Audio("./audio/fire.mp3");
 var rocks = new Audio("./audio/rock_drop.wav");
 var breeze = new Audio("./audio/swoosh.wav");
 
