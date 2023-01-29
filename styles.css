@@ -229,13 +229,22 @@ body {
 /* .btn-primary:hover, */
 .btn-primary:active,
 .btn-primary:visited {
-  color: #6d3c14 !important;
-  border-color: transparent !important;
-  background-color: transparent !important;
+    color: #6d3c14 !important;
+    border-color: transparent !important;
+    background-color: transparent !important;
 }
 
-@media screen and (max-width: 1292px) {
-  body {
-    background-color: blue;
-  }
+.btn-secondary,
+.btn-secondary:active,
+.btn-primary:visited {
+    background-color: rgb(255, 221, 187) !important;
+    color: #6d3c14 !important;
+    border: 2px solid #6d3c14;
 }
+
+
+@media screen and (max-width: 1292px) {
+    body {
+      background-color: blue;
+    }
+  }
