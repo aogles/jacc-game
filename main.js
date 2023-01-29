@@ -67,12 +67,15 @@ function updateDropdownButton() {
          "You control the graceful element of water. It's weakness is wind.";
    }
 
+
    playerAttackButtons[0].innerHTML =
       currentlyOccurringGame.player.type[0] + "!";
    playerAttackButtons[1].innerHTML =
       currentlyOccurringGame.player.type[1] + "!";
    playerAttackButtons[2].innerHTML =
       currentlyOccurringGame.player.type[2] + "!";
+
+
 }
 
 //Allows player attack buttons to be clickable:
@@ -211,4 +214,4 @@ function gameOver() {
       alert("Game Over! Enemy won. Refresh to start a new game.");
    else if (enemyHealth.value === 0)
       alert("Game over! Hero won. Refresh to start a new game.");
-}d
+}
