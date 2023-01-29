@@ -53,22 +53,22 @@ function updateDropdownButton() {
 
   if (category == "Earth") {
     currentlyOccurringGame.player.type = earth;
-    heroImage.src = "./images/earth.png";
+    heroImage.src = "./images/earth.jpeg";
     playerClassInfo.innerHTML =
       "You control the mighty element of earth. Its weakness is fire.";
   } else if (category == "Air") {
     currentlyOccurringGame.player.type = air;
-    heroImage.src = "./images/wind.png";
+    heroImage.src = "./images/wind.jpeg";
     playerClassInfo.innerHTML =
       "You control the fierce element of wind. Its weakness is earth.";
   } else if (category == "Fire") {
     currentlyOccurringGame.player.type = fire;
-    heroImage.src = "./images/fire.png";
+    heroImage.src = "./images/fire.jpeg";
     playerClassInfo.innerHTML =
       "You control the destructive element of fire. Its weakness is water.";
   } else if (category == "Water") {
     currentlyOccurringGame.player.type = water;
-    heroImage.src = "./images/water.png";
+    heroImage.src = "./images/water.jpeg";
     playerClassInfo.innerHTML =
       "You control the graceful element of water. Its weakness is wind.";
   }
@@ -175,22 +175,22 @@ function randomEnemy() {
 
   if (randomEnemy == 1) {
     currentlyOccurringGame.enemyPlayer.type = air;
-    enemyImage.src = "./images/wind.png";
+    enemyImage.src = "./images/wind.jpeg";
     enemyClassInfo.innerHTML =
       "The sorcerer is wind type. Its weakness is earth.";
   } else if (randomEnemy == 2) {
     currentlyOccurringGame.enemyPlayer.type = fire;
-    enemyImage.src = "./images/fire.png";
+    enemyImage.src = "./images/fire.jpeg";
     enemyClassInfo.innerHTML =
       "The sorcerer is fire type. Its weakness is water.";
   } else if (randomEnemy == 3) {
     currentlyOccurringGame.enemyPlayer.type = water;
-    enemyImage.src = "./images/water.png";
+    enemyImage.src = "./images/water.jpeg";
     enemyClassInfo.innerHTML =
       "The sorcerer is water type. Its weakness is wind.";
   } else if (randomEnemy == 0) {
     currentlyOccurringGame.enemyPlayer.type = earth;
-    enemyImage.src = "./images/earth.png";
+    enemyImage.src = "./images/earth.jpeg";
     enemyClassInfo.innerHTML =
       "The sorcerer is earth type. Its weakness is fire.";
   }
