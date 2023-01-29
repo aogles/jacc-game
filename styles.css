@@ -252,4 +252,8 @@ body {
     background-color: blue;
     flex-direction: column;
   }
+
+  progress[value]::-webkit-progress-value {
+    background-image: white;
+  }
 }
