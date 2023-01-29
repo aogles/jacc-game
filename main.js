@@ -211,4 +211,4 @@ function gameOver() {
       alert("Game Over! Enemy won. Refresh to start a new game.");
    else if (enemyHealth.value === 0)
       alert("Game over! Hero won. Refresh to start a new game.");
-}
+}d

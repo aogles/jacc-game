@@ -223,9 +223,9 @@ body {
     background-image: url("images/button_pressed.png");
 }
 
-.btn-primary:hover {
+/* .btn-primary:hover {
     color: #6d3c14;
-}
+} */
 
 .btn-primary:visited {
     color: #6d3c14;
@@ -242,7 +242,7 @@ body {
 } */
 
 .btn-primary,
-.btn-primary:hover,
+/* .btn-primary:hover, */
 .btn-primary:active,
 .btn-primary:visited {
     color: #6d3c14 !important;
