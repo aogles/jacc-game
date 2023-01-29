@@ -19,7 +19,7 @@ let heroImage = document.getElementById("hero-image");
 let enemyImage = document.getElementById("enemy-image");
 const gameInfoText = document.getElementById("game-text-update");
 const playerClassInfo = document.getElementById("player-class-description");
-
+const enemyClassInfo = document.getElementById("enemy-class-description");
 const dropdownButton = document.querySelector(".dropdown-toggle");
 const dropdownEarth = document.querySelector(".btn1");
 const dropdownWind = document.querySelector(".btn2");
@@ -82,11 +82,24 @@ playerAttackButtons[2].addEventListener("click", causeDamage);
 function causeDamage() {
    let inflictedDamage = damage(0, 20);
    enemyHealth.value = parseInt(enemyHealth.value) - inflictedDamage;
-   gameInfoText.innerHTML =
-      currentlyOccurringGame.player.name +
-      " has damaged " +
-      inflictedDamage +
-      ".";
+   //  gameInfoText.innerHTML =
+   //     currentlyOccurringGame.player.name +
+   //     " has damaged " +
+   //     inflictedDamage +
+   //     ".";
+
+   if (inflictedDamage == 0) {
+      gameInfoText.innerHTML = "The sorcerer narrowly dodged your attack!";
+   } else if (inflictedDamage === 20) {
+      gameInfoText.innerHTML =
+         "Critical attack! <br>has damaged " + inflictedDamage + ".";
+   } else {
+      gameInfoText.innerHTML =
+         currentlyOccurringGame.player.name +
+         " has damaged " +
+         inflictedDamage +
+         ".";
+   }
    enemyTurn();
    gameOver();
 }
@@ -105,22 +118,34 @@ const damage = function randomDamage(min, max) {
 };
 
 function damageHeroHealth() {
-   let inflictedDamage = damage(0, 20);
+   let inflictedDamage = damage(1, 20);
    heroHealth.value = parseInt(heroHealth.value) - inflictedDamage;
 
    playerAttackButtons[0].disabled = false;
    playerAttackButtons[1].disabled = false;
    playerAttackButtons[2].disabled = false;
 
-  gameInfoText.innerHTML =
-    gameInfoText.innerHTML +
-    "<br>The enemy has damaged " +
-    currentlyOccurringGame.player.name +
-    " " +
-    inflictedDamage +
-    ".";
-  laugh.play();
-  // report what attack was used and add to info box;
+   if (inflictedDamage == 0) {
+      gameInfoText.innerHTML = "Jacc dodged the sorcerer's attack! ";
+   } else if (inflictedDamage === 20) {
+      gameInfoText.innerHTML =
+         "Critical attack! <br>The enemy has damaged " +
+         currentlyOccurringGame.player.name +
+         " " +
+         inflictedDamage +
+         ".";
+   } else {
+      gameInfoText.innerHTML =
+         gameInfoText.innerHTML +
+         "<br>The enemy has damaged " +
+         currentlyOccurringGame.player.name +
+         " " +
+         inflictedDamage +
+         ".";
+      laugh.play();
+   }
+
+   // report what attack was used and add to info box;
 }
 
 const startButton = document.getElementById("start-btn");
@@ -141,15 +166,23 @@ function randomEnemy() {
    if (randomEnemy == 1) {
       currentlyOccurringGame.enemyPlayer.type = air;
       enemyImage.src = "./images/wind.png";
+      enemyClassInfo.innerHTML =
+         "The sorcerer is wind type. It's weakness is earth";
    } else if (randomEnemy == 2) {
       currentlyOccurringGame.enemyPlayer.type = fire;
       enemyImage.src = "./images/fire.png";
+      enemyClassInfo.innerHTML =
+         "The sorcerer is fire type. It's weakness is water";
    } else if (randomEnemy == 3) {
       currentlyOccurringGame.enemyPlayer.type = water;
       enemyImage.src = "./images/water.png";
+      enemyClassInfo.innerHTML =
+         "The sorcerer is water type. It's weakness is wind";
    } else if (randomEnemy == 0) {
       currentlyOccurringGame.enemyPlayer.type = earth;
       enemyImage.src = "./images/earth.png";
+      enemyClassInfo.innerHTML =
+         "The sorcerer is earth type. It's weakness is fire";
    }
 
    playerAttackButtons[4].innerHTML =
@@ -175,5 +208,5 @@ function gameOver() {
    if (heroHealth.value === 0)
       alert("Game Over! Enemy won. Refresh to start a new game.");
    else if (enemyHealth.value === 0)
-      alert("game over! Hero won.Refresh to start a new game.");
+      alert("Game over! Hero won. Refresh to start a new game.");
 }
