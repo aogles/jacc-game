@@ -200,7 +200,7 @@ body {
 
 .btn-primary {
     font-size: 18px;
-    padding-bottom: 10px;
+
     display: inline-flex;
     margin: auto;
     justify-content: center;
@@ -217,9 +217,7 @@ body {
     background-color: transparent;
 }
 
-.btn-text {
-    margin-bottom: 13px !important;
-}
+
 
 .btn-primary:active {
     background-image: url("/images/button_pressed.png");
@@ -232,6 +230,16 @@ body {
 .btn-primary:visited {
     color: #6d3c14;
 }
+
+/* created a class called button text, but the JS does not point to class btn-text to update button text */
+/* .btn-text {
+    transform: translateY(-4px);
+} */
+
+
+/* .btn-primary>.btn-text:active {
+    transform: translateY(1.5px);
+} */
 
 .btn-primary,
 .btn-primary:hover,
