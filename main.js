@@ -11,6 +11,10 @@ enemyHealth.value = 100;
 
 var laugh = new Audio("./audio/evil-laugh.mp3");
 var click = new Audio("./audio/wooden-click.wav");
+var drip = new Audio("./audio/water.mp3");
+var crackle = new Audio("./auidio/fire.mp3");
+var rocks = new Audio("./audio/rock_drop.wav");
+var breeze = new Audio("./audio/swoosh.wav");
 
 console.log("check");
 // **** target character images area ****
@@ -115,6 +119,15 @@ function causeDamage() {
   }
   gameOver();
   click.play();
+  if (currentlyOccurringGame.player.type === water) {
+    drip.play();
+  } else if (currentlyOccurringGame.player.type === earth) {
+    rocks.play();
+  } else if (currentlyOccurringGame.player.type === fire) {
+    crackle.play();
+  } else if (currentlyOccurringGame.player.type === air) {
+    breeze.play();
+  }
   enemyTurn();
 }
 
