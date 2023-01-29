@@ -10,15 +10,35 @@ body {
     flex-direction: row;
     font-family: "VT323", monospace;
     font-size: 20px;
+    background-color: #d0e7e7;
 
 }
 
+#banner-image {
+    margin-bottom: 10px;
+    height: 150px;
+}
+
 #main-title {
-    margin-bottom: 20%;
-    font-size: 100px;
-    margin-top: 1%;
+
+    font-size: 90px;
+    margin-top: 8%;
     padding: 0;
-    color: rgb(233, 19, 19);
+    color: rgb(109, 60, 20);
+
+    padding-top: 18px;
+
+}
+
+#main-title h5 {
+    padding-top: 250px;
+    margin-top: 250px;
+}
+
+#banner-image {
+    background-image: url("/images/banner.png");
+    background-repeat: no-repeat;
+    background-size: cover;
 
 }
 
