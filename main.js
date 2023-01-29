@@ -53,22 +53,22 @@ function updateDropdownButton() {
 
   if (category == "Earth") {
     currentlyOccurringGame.player.type = earth;
-    heroImage.src = "./images/earth.jpeg";
+    heroImage.src = "./images/earth.png";
     playerClassInfo.innerHTML =
       "You control the mighty element of earth. Its weakness is fire.";
   } else if (category == "Air") {
     currentlyOccurringGame.player.type = air;
-    heroImage.src = "./images/wind.jpeg";
+    heroImage.src = "./images/wind.png";
     playerClassInfo.innerHTML =
       "You control the fierce element of wind. Its weakness is earth.";
   } else if (category == "Fire") {
     currentlyOccurringGame.player.type = fire;
-    heroImage.src = "./images/fire.jpeg";
+    heroImage.src = "./images/fire.png";
     playerClassInfo.innerHTML =
       "You control the destructive element of fire. Its weakness is water.";
   } else if (category == "Water") {
     currentlyOccurringGame.player.type = water;
-    heroImage.src = "./images/water.jpeg";
+    heroImage.src = "./images/water.png";
     playerClassInfo.innerHTML =
       "You control the graceful element of water. Its weakness is wind.";
   }
