@@ -83,6 +83,7 @@ playerAttackButtons[2].addEventListener("click", causeDamage);
 function causeDamage() {
   let inflictedDamage = damage(0, 20);
   enemyHealth.value = parseInt(enemyHealth.value) - inflictedDamage;
+  currentlyOccurringGame.enemyPlayer.health = enemyHealth.value;
   //  gameInfoText.innerHTML =
   //     currentlyOccurringGame.player.name +
   //     " has damaged " +
@@ -102,7 +103,7 @@ function causeDamage() {
       ".";
   }
   enemyTurn();
-  gameOver();
+
   click.play();
 }
 
@@ -122,6 +123,7 @@ const damage = function randomDamage(min, max) {
 function damageHeroHealth() {
   let inflictedDamage = damage(1, 20);
   heroHealth.value = parseInt(heroHealth.value) - inflictedDamage;
+  currentlyOccurringGame.player.health = heroHealth.value;
 
   playerAttackButtons[0].disabled = false;
   playerAttackButtons[1].disabled = false;
@@ -146,7 +148,7 @@ function damageHeroHealth() {
       ".";
     laugh.play();
   }
-
+  gameOver();
   // report what attack was used and add to info box;
 }
 
@@ -169,22 +171,22 @@ function randomEnemy() {
     currentlyOccurringGame.enemyPlayer.type = air;
     enemyImage.src = "./images/wind.png";
     enemyClassInfo.innerHTML =
-      "The sorcerer is wind type. It's weakness is earth";
+      "The sorcerer is wind type. Its weakness is earth.";
   } else if (randomEnemy == 2) {
     currentlyOccurringGame.enemyPlayer.type = fire;
     enemyImage.src = "./images/fire.png";
     enemyClassInfo.innerHTML =
-      "The sorcerer is fire type. It's weakness is water";
+      "The sorcerer is fire type. Its weakness is water.";
   } else if (randomEnemy == 3) {
     currentlyOccurringGame.enemyPlayer.type = water;
     enemyImage.src = "./images/water.png";
     enemyClassInfo.innerHTML =
-      "The sorcerer is water type. It's weakness is wind";
+      "The sorcerer is water type. Its weakness is wind.";
   } else if (randomEnemy == 0) {
     currentlyOccurringGame.enemyPlayer.type = earth;
     enemyImage.src = "./images/earth.png";
     enemyClassInfo.innerHTML =
-      "The sorcerer is earth type. It's weakness is fire";
+      "The sorcerer is earth type. Its weakness is fire.";
   }
 
   playerAttackButtons[4].innerText =
@@ -207,8 +209,9 @@ const enemyHealth = document.getElementById("enemy-health");
 enemyHealth.value = 100;
 
 function gameOver() {
-  if (heroHealth.value === 0)
+  if (heroHealth.value === 0) {
     alert("Game Over! Enemy won. Refresh to start a new game.");
-  else if (enemyHealth.value === 0)
+  } else if (enemyHealth.value === 0) {
     alert("Game over! Hero won. Refresh to start a new game.");
+  }
 }
