@@ -100,7 +100,12 @@ function causeDamage() {
     gameInfoText.innerHTML = "The sorcerer narrowly dodged your attack!";
   } else if (inflictedDamage === 20) {
     gameInfoText.innerHTML =
-      "Critical attack! <br>has damaged " + inflictedDamage + ".";
+      "Critical attack!" +
+      "<br>" +
+      currentlyOccurringGame.player.name +
+      "has caused " +
+      inflictedDamage +
+      "damage.";
   } else {
     gameInfoText.innerHTML =
       currentlyOccurringGame.player.name +
@@ -109,8 +114,8 @@ function causeDamage() {
       ".";
   }
   gameOver();
-  enemyTurn();
   click.play();
+  enemyTurn();
 }
 
 function enemyTurn() {

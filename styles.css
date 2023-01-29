@@ -6,120 +6,120 @@ font-family: 'VT323', monospace;
 */
 
 body {
-    display: flex;
-    flex-direction: row;
-    font-family: "VT323", monospace;
-    font-size: 20px;
-    background-color: #d0e7e7;
+  display: flex;
+  flex-direction: row;
+  font-family: "VT323", monospace;
+  font-size: 20px;
+  background-color: #d0e7e7;
 }
 
 #banner-image {
-    margin-bottom: 10px;
-    height: 150px;
+  margin-bottom: 10px;
+  height: 150px;
 }
 
 #main-title {
-    font-size: 90px;
-    margin-top: 8%;
-    padding: 0;
-    color: #6d3c14;
+  font-size: 90px;
+  margin-top: 8%;
+  padding: 0;
+  color: #6d3c14;
 
-    padding-top: 18px;
+  padding-top: 18px;
 }
 
 #main-title h5 {
-    padding-top: 250px;
-    margin-top: 250px;
+  padding-top: 250px;
+  margin-top: 250px;
 }
 
 #banner-image {
-    background-image: url("images/Banner.png");
-    background-size: contain;
-    background-repeat: no-repeat;
+  background-image: url("images/Banner.png");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .health {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    height: 80px;
-    width: 360px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  height: 80px;
+  width: 360px;
 }
 
 .container {
-    margin-top: 3%;
-    display: flex;
-    flex-direction: column;
-    z-index: 10;
+  margin-top: 3%;
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
 }
 
 .card-title {
-    font-size: 50px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    font-family: "VT323", monospace;
-    font-variant: small-caps;
+  font-size: 50px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  font-family: "VT323", monospace;
+  font-variant: small-caps;
 }
 
 .card {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 #hero-card {
-    width: 100%;
+  width: 100%;
 
-    display: flex;
-    height: 35em;
+  display: flex;
+  height: 35em;
 
-    text-align: center;
-    /* border: 2px solid rgb(175, 175, 175); */
+  text-align: center;
+  /* border: 2px solid rgb(175, 175, 175); */
 }
 
 #playerCard #hero-image {
-    height: 375px;
-    width: 90%;
+  height: 375px;
+  width: 90%;
 }
 
 #info-card {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    /* border: 2px solid rgb(175, 175, 175); */
-    margin: 0.5% 10px 0 10px;
-    width: 100%;
-    height: 660px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  /* border: 2px solid rgb(175, 175, 175); */
+  margin: 0.5% 10px 0 10px;
+  width: 100%;
+  height: 660px;
 }
 
 #info-card-container {
-    margin-top: 6em;
-    box-shadow: 0px 2px 4px 0px rgba(163, 163, 163, 1);
+  margin-top: 6em;
+  box-shadow: 0px 2px 4px 0px rgba(163, 163, 163, 1);
 }
 
 #hero-image {
-    width: 90%;
-    margin: auto;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border: 1px solid transparent;
-    height: 300px;
-    width: 90%;
-    object-fit: contain;
-    border-radius: 5px;
+  width: 90%;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 1px solid transparent;
+  height: 300px;
+  width: 90%;
+  object-fit: contain;
+  border-radius: 5px;
 }
 
 #enemy-image {
-    width: 90%;
-    margin: auto;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border: 1px solid transparent;
-    height: 300px;
-    width: 90%;
-    object-fit: contain;
-    border-radius: 5px;
+  width: 90%;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 1px solid transparent;
+  height: 300px;
+  width: 90%;
+  object-fit: contain;
+  border-radius: 5px;
 }
 
 /* #title-seperator {
@@ -128,53 +128,53 @@ body {
 } */
 
 #info-card p {
-    width: 80%;
-    height: 175px;
-    margin-right: auto;
-    margin-left: auto;
+  width: 80%;
+  height: 175px;
+  margin-right: auto;
+  margin-left: auto;
 
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .card-body {
-    width: 100%;
-    height: 100%;
-    margin: auto;
+  width: 100%;
+  height: 100%;
+  margin: auto;
 }
 
 .card {
-    box-shadow: 0px 5px 4px 0px rgba(163, 163, 163, 1);
+  box-shadow: 0px 5px 4px 0px rgba(163, 163, 163, 1);
 }
 
 #player-card {
-    height: 35em;
+  height: 35em;
 }
 
 #enemy-card {
-    width: 100%;
+  width: 100%;
 
-    display: flex;
-    height: 35em;
-    text-align: center;
-    /* border: 2px solid rgb(175, 175, 175); */
+  display: flex;
+  height: 35em;
+  text-align: center;
+  /* border: 2px solid rgb(175, 175, 175); */
 }
 
 .start-container {
-    display: flex;
-    /* margin: auto; */
-    /* margin-right: 28%; */
-    justify-content: center;
+  display: flex;
+  /* margin: auto; */
+  /* margin-right: 28%; */
+  justify-content: center;
 }
 
 .dropdown {
-    display: flex;
-    margin-left: 2%;
+  display: flex;
+  margin-left: 2%;
 }
 
 #start-btn {
-    margin: 0;
-    background-color: red;
-    color: #6d3c14;
+  margin: 0;
+  background-color: red;
+  color: #6d3c14;
 }
 
 /* .btn {
@@ -191,26 +191,26 @@ body {
 } */
 
 .btn-primary {
-    font-size: 18px;
+  font-size: 18px;
 
-    display: inline-flex;
-    margin: auto;
-    justify-content: center;
-    justify-content: center;
-    text-align: center;
-    width: 8em;
-    height: 2.5em;
+  display: inline-flex;
+  margin: auto;
+  justify-content: center;
+  justify-content: center;
+  text-align: center;
+  width: 8em;
+  height: 2.5em;
 
-    background-image: url("./images/button.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: #6d3c14;
-    border-color: transparent;
-    background-color: transparent;
+  background-image: url("./images/button.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #6d3c14;
+  border-color: transparent;
+  background-color: transparent;
 }
 
 .btn-primary:active {
-    background-image: url("./images/button_pressed.png");
+  background-image: url("./images/button_pressed.png");
 }
 
 /* .btn-primary:hover {
@@ -218,7 +218,7 @@ body {
 } */
 
 .btn-primary:visited {
-    color: #6d3c14;
+  color: #6d3c14;
 }
 
 /* created a class called button text, but the JS does not point to class btn-text to update button text */
@@ -234,22 +234,21 @@ body {
 /* .btn-primary:hover, */
 .btn-primary:active,
 .btn-primary:visited {
-    color: #6d3c14 !important;
-    border-color: transparent !important;
-    background-color: transparent !important;
+  color: #6d3c14 !important;
+  border-color: transparent !important;
+  background-color: transparent !important;
 }
 
 .btn-secondary,
 .btn-secondary:active,
 .btn-primary:visited {
-    background-color: rgb(255, 221, 187) !important;
-    color: #6d3c14 !important;
-    border: 2px solid #6d3c14;
+  background-color: rgb(255, 221, 187) !important;
+  color: #6d3c14 !important;
+  border: 2px solid #6d3c14;
 }
 
-
 @media screen and (max-width: 1292px) {
-    body {
-        background-color: blue;
-    }
+  body {
+    background-color: blue;
+  }
 }
