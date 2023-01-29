@@ -175,22 +175,22 @@ function randomEnemy() {
 
   if (randomEnemy == 1) {
     currentlyOccurringGame.enemyPlayer.type = air;
-    enemyImage.src = "./images/wind.jpeg";
+    enemyImage.src = "./images/evilwind.png";
     enemyClassInfo.innerHTML =
       "The sorcerer is wind type. Its weakness is earth.";
   } else if (randomEnemy == 2) {
     currentlyOccurringGame.enemyPlayer.type = fire;
-    enemyImage.src = "./images/fire.jpeg";
+    enemyImage.src = "./images/evilfire.png";
     enemyClassInfo.innerHTML =
       "The sorcerer is fire type. Its weakness is water.";
   } else if (randomEnemy == 3) {
     currentlyOccurringGame.enemyPlayer.type = water;
-    enemyImage.src = "./images/water.jpeg";
+    enemyImage.src = "./images/evilwater.png";
     enemyClassInfo.innerHTML =
       "The sorcerer is water type. Its weakness is wind.";
   } else if (randomEnemy == 0) {
     currentlyOccurringGame.enemyPlayer.type = earth;
-    enemyImage.src = "./images/earth.jpeg";
+    enemyImage.src = "./images/evilearth.png";
     enemyClassInfo.innerHTML =
       "The sorcerer is earth type. Its weakness is fire.";
   }
