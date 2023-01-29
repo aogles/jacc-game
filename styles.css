@@ -250,5 +250,6 @@ body {
 @media screen and (max-width: 1292px) {
   body {
     background-color: blue;
+    flex-direction: column;
   }
 }
