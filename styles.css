@@ -201,7 +201,7 @@ body {
     width: 8em;
     height: 2.5em;
 
-    background-image: url("./images/Button.png");
+    background-image: url("./images/button.png");
     background-repeat: no-repeat;
     background-size: cover;
     color: #6d3c14;
@@ -210,7 +210,7 @@ body {
 }
 
 .btn-primary:active {
-    background-image: url("./images/Button_pressed.png");
+    background-image: url("./images/button_pressed.png");
 }
 
 /* .btn-primary:hover {
