@@ -109,13 +109,13 @@ function causeDamage() {
          currentlyOccurringGame.player.name +
          "has dealt " +
          inflictedDamage +
-         "damage.";
+         " damage.";
    } else {
       gameInfoText.innerHTML =
          currentlyOccurringGame.player.name +
          " has dealt " +
          inflictedDamage +
-         "damage.";
+         " damage.";
    }
    gameOver();
    click.play();
@@ -166,7 +166,7 @@ function damageHeroHealth() {
          gameInfoText.innerHTML +
          "<br>The enemy has damaged " +
          currentlyOccurringGame.player.name +
-         " for" +
+         " for " +
          inflictedDamage +
          ".";
       laugh.play();
