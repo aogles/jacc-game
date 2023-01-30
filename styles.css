@@ -47,10 +47,9 @@ body {
 
 #banner-image {
     background-image: url("./images/banner.png");
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     margin: auto;
-    margin-left: 10%;
 }
 
 
