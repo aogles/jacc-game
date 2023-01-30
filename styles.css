@@ -8,20 +8,19 @@ font-family: 'VT323', monospace;
     cursor: url("./images/cursor_icon.png"), default;
     cursor: url("./images/cursor_icon.png"), auto;
 
+
 }
 
 body {
-    display: inline-flex;
-    flex-direction: row;
+    display: flex;
+    /* flex-direction: row; */
     font-family: "VT323", monospace;
     font-size: 20px;
-    background-color: transparent;
+    /* background-color: transparent; */
     background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/1b98a52f-197d-4a3b-9881-5a48eefd9867/d4xntof-4df704fa-3939-4942-b59b-88d95c851eb6.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzFiOThhNTJmLTE5N2QtNGEzYi05ODgxLTVhNDhlZWZkOTg2N1wvZDR4bnRvZi00ZGY3MDRmYS0zOTM5LTQ5NDItYjU5Yi04OGQ5NWM4NTFlYjYuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.CoMjrDFMMjJaOfB2-cu7nH274Xyua8iIaxjBCPscSFc");
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100%;
-    width: 100%;
-
+    height: 100vh;
 }
 
 
@@ -70,7 +69,6 @@ body {
     margin-top: 3%;
     display: flex;
     flex-direction: column;
-    z-index: 10;
 
 }
 
@@ -90,6 +88,8 @@ body {
     flex-direction: column;
     padding-top: 0;
     margin-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
     background-color: #f1f1f16f;
 
 }
@@ -107,6 +107,8 @@ body {
     display: flex;
     height: 35em;
     text-align: center;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 
@@ -119,6 +121,7 @@ body {
     margin: 0.5% 10px 0 10px;
     width: 100%;
     height: 660px;
+
 }
 
 #info-card-container {
@@ -183,12 +186,6 @@ body {
     box-shadow: 0px 2px 4px 0px rgba(50, 50, 50, 0.808);
 }
 
-#player-card {
-    height: 350px;
-    max-height: 400px;
-    width: 20px;
-    max-width: 200px;
-}
 
 
 
@@ -196,6 +193,7 @@ body {
 #enemyCard .card-body {
 
     max-height: 250px;
+
 }
 
 .start-container {

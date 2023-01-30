@@ -223,7 +223,7 @@ function randomEnemy() {
 
 function updateInfoText() {
    gameInfoText.innerHTML =
-      "Good luck hero. I hope you are victorious. Our kindgdom, no... the entire realm is depending on you. ";
+      "Good luck hero. I hope you are victorious... Our people are depending on you. ";
 }
 
 function gameOver() {
