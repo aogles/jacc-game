@@ -1,91 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap"
+      rel="stylesheet"
+    />
+    <title>JACC Game</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet" />
-  <title>JACC Game</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
-  <link rel="stylesheet" href="./styles.css" />
-</head>
+  <body>
+    <div class="container Card-1" id="hero-card">
+      <div class="title-container">
+        <h5 class="card-title">JACC</h5>
+      </div>
 
-<body>
+      <progress
+        class="health"
+        id="hero-health"
+        value="100"
+        max="100"
+      ></progress>
 
-
-  <div class="container Card-1" id="hero-card">
-    <div class="title-container">
-      <h5 class="card-title">JACC</h5>
-    </div>
-
-    <progress class="health" id="hero-health" value="100" max="100"></progress>
-
-    <div class="card" id="playerCard">
-      <!-- temporary image placeholder start -->
-      <img src="./images/titlepage.jpg" class="card-img-top" id="hero-image" alt="..." />
-      <!-- temporary image placeholder enemy -->
-      <div class="card-body">
-        <p class="card-text" id="player-class-description">
-          Once you choose your class, your destiny awaits.
-        </p>
-        <button class="btn btn-primary attack-btn">Select Element</button>
-        <button class="btn btn-primary attack-btn">Select Element</button>
-        <button class="btn btn-primary attack-btn">Select Element</button>
+      <div class="card" id="playerCard">
+        <!-- temporary image placeholder start -->
+        <img
+          src="./images/titlepage.jpg"
+          class="card-img-top"
+          id="hero-image"
+          alt="..."
+        />
+        <!-- temporary image placeholder enemy -->
+        <div class="card-body">
+          <p class="card-text" id="player-class-description">
+            Once you choose your class, your destiny awaits.
+          </p>
+          <button class="btn btn-primary attack-btn">Select Element</button>
+          <button class="btn btn-primary attack-btn">Select Element</button>
+          <button class="btn btn-primary attack-btn">Select Element</button>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- *
+    <!-- *
   *
   *
   * -->
-  <div class="container Card-2" id="info-card">
-    <div class="tile-container">
-      <div id="banner-image">
-        <h5 class="card-title" id="main-title">Jacc's Journey</h5>
+    <div class="container Card-2" id="info-card">
+      <div class="tile-container">
+        <div id="banner-image">
+          <h5 class="card-title" id="main-title">Jacc's Journey</h5>
+        </div>
       </div>
-    </div>
-    <div id="title-seperator"></div>
-    <div class="card" id="info-card-container">
-      <!-- temporary image placeholder sstart -->
+      <div id="title-seperator"></div>
+      <div class="card" id="info-card-container">
+        <!-- temporary image placeholder sstart -->
 
-      <!-- do we want an image on this card or just text? -->
-      <!-- <img src="" class="card-img-top" alt="..." /> -->
-      <!-- temporary image placeholder end -->
-      <div class="card-body" id="info-content-container">
-        <p class="card-text" id="game-text-update">
-          Brave hero, thank you for answering our desperate call! The
-          elementals have succumbed to madness because of a wicked (sorcerer)!
-          Our village will come to ruins if we are not aided by your mighty
-          power. Please help us!
-        </p>
-        <!--Dropdown button not working-->
-        <div class="start-container">
-          <button class="btn btn-primary" id="start-btn">Start</button>
-          <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-              aria-expanded="false">
-              Dropdown button
-            </button>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item btn1">
-                  Earth
-                </a></li>
-              <li><a class="dropdown-item btn2">
-                  Air
-                </a></li>
-              <li><a class="dropdown-item btn3">
-                  Fire
-                </a></li>
-              <li><a class="dropdown-item btn4">
-                  Water
-                </a></li>
-            </ul>
+        <!-- do we want an image on this card or just text? -->
+        <!-- <img src="" class="card-img-top" alt="..." /> -->
+        <!-- temporary image placeholder end -->
+        <div class="card-body" id="info-content-container">
+          <p class="card-text" id="game-text-update">
+            Brave hero, thank you for answering our desperate call! The
+            elementals have succumbed to madness because of a wicked (sorcerer)!
+            Our village will come to ruins if we are not aided by your mighty
+            power. Please help us!
+          </p>
+          <!--Dropdown button not working-->
+          <div class="start-container">
+            <button class="btn btn-primary" id="start-btn">Start</button>
+            <div class="dropdown">
+              <button
+                class="btn btn-secondary dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Dropdown button
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item btn1"> Earth </a></li>
+                <li><a class="dropdown-item btn2"> Air </a></li>
+                <li><a class="dropdown-item btn3"> Fire </a></li>
+                <li><a class="dropdown-item btn4"> Water </a></li>
+              </ul>
+            </div>
           </div>
+
+          <!--End of dropdown button not working-->
         </div>
 
         <!--End of dropdown button not working-->
@@ -94,45 +107,47 @@
       <!--End of dropdown button not working-->
     </div>
 
-    <!--End of dropdown button not working-->
-  </div>
-  </div>
-  </div>
-  <!-- *
+    <!-- *
   *
   *
   * -->
-  <div class="container Card-3" id="enemy-card">
-    <div class="title-container">
-      <h5 class="card-title">SORCERER</h5>
-    </div>
+    <div class="container Card-3" id="enemy-card">
+      <div class="title-container">
+        <h5 class="card-title">SORCERER</h5>
+      </div>
 
-    <progress class="health" id="enemy-health" value="100" max="100"></progress>
+      <progress
+        class="health"
+        id="enemy-health"
+        value="100"
+        max="100"
+      ></progress>
 
-    <div class="card" id="enemyCard">
-      <!-- temporary image placeholder start -->
-      <img src="./images/titlepage.jpg" class="card-img-top" id="enemy-image" alt="..." />
-      <!-- temporary image placeholder end -->
-      <div class="card-body">
-        <p class="card-text" id="enemy-class-description">
-          The enemy's class will be chosen at random.
-        </p>
-        <button class="btn btn-primary attack-btn">
-          Select Element
-        </button>
-        <button class="btn btn-primary attack-btn">
-          Select Element
-        </button>
-        <button class="btn btn-primary attack-btn">
-          Select Element
-        </button>
+      <div class="card" id="enemyCard">
+        <!-- temporary image placeholder start -->
+        <img
+          src="./images/titlepage.jpg"
+          class="card-img-top"
+          id="enemy-image"
+          alt="..."
+        />
+        <!-- temporary image placeholder end -->
+        <div class="card-body">
+          <p class="card-text" id="enemy-class-description">
+            The enemy's class will be chosen at random.
+          </p>
+          <button class="btn btn-primary attack-btn">Select Element</button>
+          <button class="btn btn-primary attack-btn">Select Element</button>
+          <button class="btn btn-primary attack-btn">Select Element</button>
+        </div>
       </div>
     </div>
-  </div>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-    crossorigin="anonymous"></script>
-  <script type="module" src="main.js"></script>
-</body>
-
-</html>`
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
+`
